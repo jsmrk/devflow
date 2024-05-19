@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "@/style/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 import {
   ClerkProvider,
   // SignInButton,
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   title: "DevFlow",
   description: "Social Media for Developers",
   icons: {
-    icon: "/public/assets/images/site-logo.svg",
+    icon: "/assets/images/site-logo.svg",
   },
 };
 
@@ -37,13 +38,14 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang='en'>
         <body className={`${inter.className} ${spaceGrotesk.className}`}>
-          {/* <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn> */}
-          {children}
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
