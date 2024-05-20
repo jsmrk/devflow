@@ -6,7 +6,7 @@ import React from "react";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main className='relative'>
+    <main className='relative bg-card'>
       <Navbar />
       <div className='flex'>
         <LeftSidebar />

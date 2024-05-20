@@ -37,16 +37,16 @@ function RightSidebar() {
   ];
 
   return (
-    <section className='sticky bg-card right-0 top-0 flex h-screen flex-col justify-between overflow-y-auto p-6 pt-36 max-sm:hidden w-[350px]'>
+    <section className='sticky bg-card right-0 top-0 flex h-screen flex-col justify-between overflow-y-auto p-6 pt-32 max-sm:hidden w-[350px]'>
       <div>
         <h3 className='text-xl font-extrabold'>Top Questions</h3>
-        <div className='mt-7 flex w-full flex-col gap-3'>
+        <div className='mt-3 flex w-full flex-col gap-3'>
           {hotQuestions.map((item) => {
             return (
               <Link
                 key={item._id}
                 href={`/questions/${item._id}`}
-                className='flex cursor-pointer item-center justify-between gap-7 hover:bg-primary rounded-xl p-3'
+                className='flex cursor-pointer item-center justify-between  hover:bg-primary rounded-xl p-3'
               >
                 <p className='text-sm'>{item.title}</p>
                 <Image
@@ -61,8 +61,8 @@ function RightSidebar() {
         </div>
       </div>
       <div>
-        <h3 className='text-xl font-extrabold'>Popular Tags</h3>
-        <div className='mt-7 flex flex-col gap-4'>
+        <h3 className='text-xl font-extrabold mt-7'>Popular Tags</h3>
+        <div className='mt-3 flex flex-col gap-4'>
           {popularTags.map((item) => {
             return (
               <RenderTag

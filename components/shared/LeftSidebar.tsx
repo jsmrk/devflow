@@ -12,7 +12,7 @@ function LeftSidebar() {
   const pathname = usePathname();
 
   return (
-    <section className='sticky bg-card left-0 top-0 flex h-screen flex-col justify-between overflow-y-auto p-6 pt-36 max-sm:hidden lg:w-[266px]'>
+    <section className='sticky bg-card left-0 top-0 flex h-screen flex-col justify-between overflow-y-auto p-6 pt-32 max-sm:hidden lg:w-[266px]'>
       <div className='flex h-full flex-col gap-3 '>
         {sidebarLinks.map((item) => {
           const isActive =
@@ -45,7 +45,7 @@ function LeftSidebar() {
       <SignedOut>
         <div className='flex flex-col gap-3'>
           <Link href={"/sign-in"}>
-            <Button className='w-full bg-secondary max-lg:bg-transparent max-lg:p-0'>
+            <Button className='w-full bg-gray max-lg:bg-transparent max-lg:p-0'>
               <Image
                 src={"/assets/icons/account.svg"}
                 alt={"Sign in"}
@@ -57,7 +57,7 @@ function LeftSidebar() {
             </Button>
           </Link>
           <Link href={"/sign-up"}>
-            <Button className='w-full bg-secondary max-lg:bg-transparent max-lg:p-0'>
+            <Button className='w-full bg-gray max-lg:bg-transparent max-lg:p-0'>
               <Image
                 src={"/assets/icons/sign-up.svg"}
                 alt={"Sign Up"}
