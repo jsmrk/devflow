@@ -13,7 +13,7 @@ function LeftSidebar() {
 
   return (
     <section className='sticky bg-card left-0 top-0 flex h-screen flex-col justify-between overflow-y-auto p-6 pt-32 max-sm:hidden lg:w-[266px]'>
-      <div className='flex h-full flex-col gap-3 '>
+      <div className='flex h-full flex-col gap-3   '>
         {sidebarLinks.map((item) => {
           const isActive =
             (pathname.includes(item.route) && item.route.length > 1) ||
