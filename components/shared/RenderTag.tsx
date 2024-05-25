@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 interface tags {
   _id: number;
   name: string;
-  totalQuestion: number;
+  totalQuestion?: number;
   showCount?: boolean;
 }
 
