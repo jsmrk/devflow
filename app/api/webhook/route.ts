@@ -82,7 +82,7 @@ export async function POST(req: Request) {
         picture: image_url,
         username: username!,
       },
-      path: `/profile/${IDBObjectStore}`,
+      path: `/profile/${id}`,
     });
     return NextResponse.json({ message: "OK", user: mongoUser });
   }
