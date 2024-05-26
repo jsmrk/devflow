@@ -1,4 +1,3 @@
-import HomeFilter from "@/components/home/HomeFilter";
 import UserCard from "@/components/shared/cards/UserCard";
 import Filter from "@/components/shared/Filter";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
