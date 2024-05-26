@@ -20,7 +20,7 @@ import { QuestionSchema } from "@/lib/validation";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
 import { createQuestion } from "@/lib/actions/question.action";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface props {
   mongoUserId: string;
@@ -32,7 +32,7 @@ const QuestionForm = ({ mongoUserId }: props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const editorRef = useRef(null);
   const router = useRouter();
-  // const pathname = usePathname();
+  const pathname = usePathname();
 
   const form = useForm<z.infer<typeof QuestionSchema>>({
     resolver: zodResolver(QuestionSchema),
@@ -44,17 +44,17 @@ const QuestionForm = ({ mongoUserId }: props) => {
   });
 
   async function onSubmit(values: z.infer<typeof QuestionSchema>) {
-    console.log(values);
     setIsSubmitting(true);
+
     try {
       await createQuestion({
         title: values.title,
         content: values.explanation,
         tags: values.tags,
+        path: pathname,
         // actually not need to parse, but just to make sure always parse if the data is coming from sa stringify to avoid most errors
         author: JSON.parse(mongoUserId),
       });
-
       router.push("/");
     } catch (error) {
     } finally {
