@@ -1,6 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
-  // "rules": {
-  //   "no-unused-vars": "error" // Set to "error" for errors, "warn" for warnings, or "off" to disable
-  // }
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-unused-vars": "error"
+  }
 }

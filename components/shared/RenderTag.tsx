@@ -3,7 +3,7 @@ import React from "react";
 import { Badge } from "../ui/badge";
 
 interface tags {
-  _id: number;
+  _id: string;
   name: string;
   totalQuestion?: number;
   showCount?: boolean;
