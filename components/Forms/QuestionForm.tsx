@@ -165,6 +165,8 @@ const QuestionForm = ({ mongoUserId }: props) => {
                       "removeformat | help",
                     content_style:
                       "body { font-family:Helvetica,Arial,sans-serif; font-size:15px}",
+                    skin: "oxide-dark",
+                    content_css: "dark",
                   }}
                 />
               </FormControl>
