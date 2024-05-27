@@ -29,11 +29,11 @@ function RightSidebar() {
   ];
 
   const popularTags = [
-    { _id: 1, name: "javasript", totalQuestion: 5 },
-    { _id: 2, name: "react", totalQuestion: 55 },
-    { _id: 3, name: "typescript", totalQuestion: 15 },
-    { _id: 4, name: "vue", totalQuestion: 65 },
-    { _id: 5, name: "nextjs", totalQuestion: 25 },
+    { _id: "1", name: "javasript", totalQuestion: 5 },
+    { _id: "2", name: "react", totalQuestion: 55 },
+    { _id: "3", name: "typescript", totalQuestion: 15 },
+    { _id: "4", name: "vue", totalQuestion: 65 },
+    { _id: "5", name: "nextjs", totalQuestion: 25 },
   ];
 
   return (
